@@ -2,3 +2,6 @@ Para inicializar el reposisitorio es con el comando git init
 Para creaer un nuevo repositorio git init nombreX
 Para vincular el reposisitorio local con el remoto es comando es: git remote add origin linkHTTPS que se saca se la pestaña code en github
 Para ver el estado es con el comando git status
+Para subir todos los cambios es git add .
+git commit -m "Los cambios que se hayan hecho" No esta todavía subido al repo remoto.
+Para subirlo del remoto al local comando: git push origin master(nombre de la rama)
