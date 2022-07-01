@@ -16,6 +16,21 @@ const agregarTarea = tarea => {
   
 }
 
+const eliminarTarea = id => {
+  const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
+  setTareas(tareasActualizadas);
+}
+
+const completarTarea = id => {
+  const tareasActualizadas = tareas.map(tarea => {
+    if (tarea.id === id ) {
+      tarea.completada = !tarea.completada;
+    }
+    return tarea;
+  });
+  setTareas(tareasActualizadas);
+}
+
     return (
         /*Utilizar etiquetas vacías se llaman fragmentos y sirven para poder escribir la estrucutra*/
         <>
@@ -28,6 +43,9 @@ const agregarTarea = tarea => {
                   id={tarea.id}
                   texto={tarea.texto}
                   completada={tarea.completada}
+                  completarTarea={completarTarea}
+                  eliminarTarea={eliminarTarea}
+                  
                   />
 
               )
